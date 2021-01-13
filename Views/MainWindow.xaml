@@ -1,0 +1,25 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:MakeOrderStu3.ViewModels;assembly=MakeOrderStu3"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        MinWidth="1200" MinHeight="700"
+        Width="1200" Height="700"
+        x:Class="MakeOrderStu3.Views.MainWindow"
+        Icon="/Assets/Stu3-logo.ico"
+        Title="MakeOrderStu3">  
+
+  <TabControl Items="{Binding ViewModels}" SelectedItem="{Binding SelectedViewModel}" >
+    <TabControl.ItemTemplate>
+      <DataTemplate>
+        <TextBlock Text="{Binding Name}"/>
+      </DataTemplate>
+    </TabControl.ItemTemplate>
+    <TabControl.ContentTemplate>
+      <DataTemplate>
+        <ContentControl Content="{Binding}" />
+      </DataTemplate>
+    </TabControl.ContentTemplate>
+  </TabControl>
+
+</Window>
